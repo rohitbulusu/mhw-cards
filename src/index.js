@@ -1,32 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Card from "./Card";
 import "tachyons";
 import { monsters } from "./monsters";
+import CardList from "./CardList";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <div>
-    <Card
-      id={monsters[0].id}
-      name={monsters[0].name}
-      hp={monsters[0].hp}
-      link={monsters[0].link}
-    />
-    <Card
-      id={monsters[1].id}
-      name={monsters[1].name}
-      hp={monsters[1].hp}
-      link={monsters[1].link}
-    />
-    <Card
-      id={monsters[2].id}
-      name={monsters[2].name}
-      hp={monsters[2].hp}
-      link={monsters[2].link}
-    />
-  </div>,
+  <CardList monsters={monsters} />,
   document.getElementById("root")
 );
 
