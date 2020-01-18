@@ -1,12 +1,14 @@
 import React from "react";
+import "./Card.css";
+import greatjagras from "./assets/great-jagras.png";
 
-const Card = () => {
+const Card = props => {
   return (
-    <div>
-      <img alt="photo of great jagras" src=""></img>
+    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+      <img alt="photo" src={props.id}></img>
       <div>
-        <h2>Great Jagras</h2>
-        <p>Poor monster just hungry</p>
+        <h2>{props.name}</h2>
+        <p>{props.hp}</p>
       </div>
     </div>
   );
